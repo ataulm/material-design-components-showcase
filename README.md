@@ -11,6 +11,8 @@ allprojects {
         maven { url "https://jitpack.io" }
     }
 }
+
+implementation 'com.github.ataulm:material-design-components-showcase:<latest-commit or release>'
 ```
 
 Then open the included Activity:

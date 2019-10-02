@@ -14,5 +14,6 @@ android {
 }
 
 dependencies {
+    implementation libraries.androidxConstraintLayout
     implementation libraries.materialDesignComponents
 }
