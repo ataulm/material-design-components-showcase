@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion versions.androidSdk.compile
+
+    defaultConfig {
+        minSdkVersion versions.androidSdk.min
+    }
+}
+
+dependencies {
+    implementation libraries.materialDesignComponents
+}

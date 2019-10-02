@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion versions.androidSdk.compile
+
+    defaultConfig {
+        applicationId 'com.example'
+        minSdkVersion versions.androidSdk.min
+        targetSdkVersion versions.androidSdk.target
+        versionCode 1
+        versionName '1.0'
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':library')
+
+    implementation libraries.androidxAppCompat
+    implementation libraries.androidxConstraintLayout
+    implementation libraries.androidxLegacySupportV13
+    implementation libraries.androidxRecyclerView
+    implementation libraries.glide
+    implementation libraries.kotlinStdLib
+    implementation libraries.materialDesignComponents
+    implementation libraries.moshi
+    implementation libraries.roomRuntime
+
+    kapt libraries.roomCompiler
+
+    androidTestImplementation libraries.androidxEspressoCore
+    androidTestImplementation libraries.androidxTestRules
+    androidTestImplementation libraries.androidxTestRunner
+
+    testImplementation libraries.googleTruth
+    testImplementation libraries.jUnit
+    testImplementation libraries.mockitoCore
+}
