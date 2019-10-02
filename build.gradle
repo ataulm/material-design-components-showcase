@@ -6,6 +6,7 @@ buildscript {
     }
     dependencies {
         classpath libraries.build.androidGradle
+        classpath libraries.build.androidMavenGradle
         classpath libraries.build.kotlinGradle
     }
 }
