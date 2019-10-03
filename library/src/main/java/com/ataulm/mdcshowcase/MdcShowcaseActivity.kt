@@ -12,7 +12,7 @@ class MdcShowcaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(intent.getIntExtra(EXTRA_THEME, 0))
+        intent.extras?.getInt(EXTRA_THEME)?.let { setTheme(it) }
         setContentView(R.layout.mdcs__activity_mdc_showcase)
 
         val shouldSetSupportActionBar = intent.getBooleanExtra(EXTRA_SET_SUPPORT_ACTION_BAR, false)
@@ -38,7 +38,7 @@ class MdcShowcaseActivity : AppCompatActivity() {
 }
 
 fun Context.startMdcShowcase(
-        @StyleRes themeResId: Int,
+        @StyleRes themeResId: Int? = null,
         shouldSetSupportActionBar: Boolean = false,
         inflatables: ArrayList<Int> = arrayListOf(R.layout.mdcs__default_inflatable)
 ) {

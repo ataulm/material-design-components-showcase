@@ -25,10 +25,16 @@ class DebugActivity : AppCompatActivity() {
         setContentView(R.layout.activity_debug)
 
         openThemeShowcaseButton.setOnClickListener {
-            startMdcShowcase(R.style.Theme_Demo)
+            startMdcShowcase()
         }
     }
 }
+```
+
+We can specify a particular theme to load too (by default it'll take the application theme):
+
+```kotlin
+startMdcShowcase(R.style.Theme_Demo)
 ```
 
 There's a MaterialToolbar too, which we can set with a flag:
