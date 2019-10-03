@@ -15,6 +15,7 @@ ext {
                     kotlinGradle      : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
             ],
             androidxConstraintLayout: 'androidx.constraintlayout:constraintlayout:2.0.0-beta2',
-            materialDesignComponents: 'com.google.android.material:material:1.1.0-alpha10'
+            androidxRecyclerView    : 'androidx.recyclerview:recyclerview:1.0.0',
+            materialDesignComponents: 'com.google.android.material:material:1.1.0-alpha10',
     ]
 }

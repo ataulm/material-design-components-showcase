@@ -1,0 +1,48 @@
+<resources>
+
+    <color name="navy">#14233C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#00A4DB</color>
+    <color name="green">#00BA4E</color>
+    <color name="yellow">#F5A623</color>
+    <color name="red">#F43951</color>
+
+    <style name="Theme.Demo" parent="BaseTheme.Demo">
+        <item name="isLightTheme">false</item>
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorPrimaryVariant">@color/navy</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorError">@color/red</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorSurface">@color/navy</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="android:colorBackground">@color/navy</item>
+        <item name="colorOnBackground">@color/white</item>
+    </style>
+
+    <style name="BaseTheme.Demo" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:textViewStyle">@style/Widget.Demo.TextView</item>
+        <item name="switchStyle">@style/Widget.Demo.Switch</item>
+        <item name="materialButtonStyle">@style/Widget.Demo.Button</item>
+    </style>
+
+    <style name="Widget.Demo.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?colorSecondary</item>
+    </style>
+
+    <style name="Widget.Demo.Button.UnelevatedButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="backgroundTint">?colorSecondary</item>
+    </style>
+
+    <style name="Widget.Demo.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:textColor">?colorOnSurface</item>
+    </style>
+
+    <style name="Widget.Demo.TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?colorOnSurface</item>
+    </style>
+
+</resources>

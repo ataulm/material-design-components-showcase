@@ -5,15 +5,8 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/darkButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dark" />
-
-    <Button
-        android:id="@+id/lightButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Light" />
+        android:text="My custom inflatable" />
 
 </LinearLayout>
