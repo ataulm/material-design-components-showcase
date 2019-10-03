@@ -40,7 +40,7 @@ class MdcShowcaseActivity : AppCompatActivity() {
 fun Context.startMdcShowcase(
         @StyleRes themeResId: Int? = null,
         shouldSetSupportActionBar: Boolean = false,
-        inflatables: ArrayList<Int> = arrayListOf(R.layout.mdcs__default_inflatable)
+        inflatables: ArrayList<Int> = arrayListOf(R.layout.mdcs__inflatables_all)
 ) {
     val intent = Intent(this, MdcShowcaseActivity::class.java)
             .putExtra(MdcShowcaseActivity.EXTRA_THEME, themeResId)

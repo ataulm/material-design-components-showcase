@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/mdcs__inflatable_buttons" />
+
+    <include layout="@layout/mdcs__inflatable_chips" />
+
+    <include layout="@layout/mdcs__inflatable_toggles" />
+
+    <include layout="@layout/mdcs__inflatable_inputs" />
+
+    <include layout="@layout/mdcs__inflatable_tab_layout" />
+
+    <include layout="@layout/mdcs__inflatable_bottom_navigation" />
+
+    <include layout="@layout/mdcs__inflatable_card" />
+
+</LinearLayout>
