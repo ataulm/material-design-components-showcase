@@ -2,7 +2,7 @@ ext {
     versions = [
             androidSdk: [
                     compile: 28,
-                    min    : 23,
+                    min    : 21,
                     target : 28
             ],
             kotlin    : '1.3.50'
@@ -16,6 +16,6 @@ ext {
             ],
             androidxConstraintLayout: 'androidx.constraintlayout:constraintlayout:2.0.0-beta2',
             androidxRecyclerView    : 'androidx.recyclerview:recyclerview:1.0.0',
-            materialDesignComponents: 'com.google.android.material:material:1.1.0-alpha10',
+            materialDesignComponents: 'com.google.android.material:material:1.1.0-beta01',
     ]
 }

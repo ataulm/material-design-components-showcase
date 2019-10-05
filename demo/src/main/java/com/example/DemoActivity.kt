@@ -8,7 +8,13 @@ class DemoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startMdcShowcase(R.style.Theme_Demo, shouldSetSupportActionBar = true)
+        startMdcShowcase(R.style.Theme_Demo, shouldSetSupportActionBar = true,
+                inflatables = arrayListOf(
+                        R.layout.demo_inflatable_buttons,
+                        R.layout.mdcs__inflatable_bottom_navigation
+
+                )
+        )
         finish()
     }
 }
