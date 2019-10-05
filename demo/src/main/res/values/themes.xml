@@ -48,7 +48,7 @@
     </style>
 
     <style name="ThemeOverlay.Demo.Toolbar" parent="">
-        <item name="android:colorControlNormal">?colorOnBackground</item>
+        <item name="iconTint">?colorOnBackground</item>
     </style>
 
     <style name="Platform.Theme.Demo" parent="Platform.V21.Theme.Demo" />

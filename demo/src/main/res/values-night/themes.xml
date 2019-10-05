@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Demo" parent="Base.Theme.Demo">
+        <item name="isLightTheme">false</item>
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorError">@color/red</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorSurface">@color/dark_grey</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="android:colorBackground">@color/dark_grey</item>
+        <item name="colorOnBackground">@color/white</item>
+    </style>
+
+</resources>

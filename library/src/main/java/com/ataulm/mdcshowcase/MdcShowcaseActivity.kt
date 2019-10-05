@@ -3,9 +3,12 @@ package com.ataulm.mdcshowcase
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.annotation.StyleRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import kotlinx.android.synthetic.main.mdcs__activity_mdc_showcase.*
 
 class MdcShowcaseActivity : AppCompatActivity() {
@@ -28,6 +31,29 @@ class MdcShowcaseActivity : AppCompatActivity() {
         val items = intent.getIntegerArrayListExtra(EXTRA_ITEMS)
         adapter.submitList(items)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_mdc_showcase, menu)
+        menu.findItem(R.id.day).isVisible = darkModeEnabled()
+        menu.findItem(R.id.night).isVisible = !darkModeEnabled()
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.day -> {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            invalidateOptionsMenu()
+            true
+        }
+        R.id.night -> {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            invalidateOptionsMenu()
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
+    }
+
+    private fun darkModeEnabled() = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
 
     companion object {
 
