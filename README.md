@@ -1,9 +1,13 @@
 material design components showcase
 ===================================
 
-[Nick Rout](https://twitter.com/ricknout) added [this awesome debug activity to MuVi](https://github.com/ataulm/muvi/pull/27) which showcases Material components with a given theme.
+[Nick Rout](https://twitter.com/ricknout) added [this awesome debug activity to MuVi](https://github.com/ataulm/muvi/pull/27) which showcases Material components with a given theme. This library follows the same idea, but saves you from having to do the same in every app that you have!
 
-This library lets you see how your application theme is applied to different Material components. Add it as a dependency to your project:
+Light preview | Dark preview
+---|---
+![light mode](./light.png) | ![dark mode](./dark.png)
+
+Add it as a dependency to your project:
 
 ```groovy
 allprojects {
