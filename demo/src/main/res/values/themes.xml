@@ -17,11 +17,23 @@
         <item name="colorOnBackground">@color/navy</item>
     </style>
 
+    <attr format="reference" name="ataulmTextViewStyle"/>
+
     <style name="Base.Theme.Demo" parent="Platform.Theme.Demo">
         <item name="android:textViewStyle">@style/Widget.Demo.TextView</item>
         <item name="materialButtonStyle">@style/Widget.Demo.Button</item>
         <item name="switchStyle">@style/Widget.Demo.Switch</item>
         <item name="toolbarStyle">@style/Widget.Demo.Toolbar</item>
+        <item name="ataulmTextViewStyle">@style/Widget.Demo.AtaulmTextView</item>
+    </style>
+
+    <style name="Widget.Demo.AtaulmTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">?colorOnBackground</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Demo.AtaulmTextView</item>
+    </style>
+
+    <style name="ThemeOverlay.Demo.AtaulmTextView" parent="">
+        <item name="colorOnBackground">@color/red</item>
     </style>
 
     <style name="Widget.Demo.Button" parent="Widget.MaterialComponents.Button">
